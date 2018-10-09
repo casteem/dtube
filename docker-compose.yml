@@ -1,0 +1,13 @@
+
+tube:
+  image: abernix/meteord:base
+  ports:
+   - "8080:80"
+  links:
+   - mongo
+  environment:
+   - MONGO_URL=mongodb://mongo/tube
+   - ROOT_URL=http://tube.steem.racing
+
+mongo:
+  image: mongo:latest
