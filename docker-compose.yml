@@ -1,8 +1,9 @@
-
 tube:
-  image: abernix/meteord:base
+  image: abernix/meteord:binbuild
   ports:
    - "8080:80"
+  volumes:
+   - /home/steem/src/dtube/bundle:/bundle
   links:
    - mongo
   environment:
